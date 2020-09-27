@@ -1,0 +1,65 @@
+body {
+    background: url("./bg.png") no-repeat fixed center;
+}
+.container {
+    position: relative;
+    display: inline;
+}
+.flag {
+    transform: translate3d(0, 26em, 0);
+    transition: 7s all ease-in-out;
+    width: 30vw;
+}
+.flag img {
+    width: 30vw;
+    position: absolute;
+    z-index: 9999;
+    left: 23vw;
+}
+.flagpole {
+    width: 50vw;
+}
+.flagpole img {
+    width: 50vw;
+}
+.up {
+    transform: translate3d(0, 0, 0);
+}
+.students {
+    /*position: relative;*/
+}
+.students img {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+#flag_up {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    bottom: 40vw;
+    right: 5vw;
+}
+.pause {
+    height: 9vw;
+    width: 9vw;
+    display: block;
+    background: url(./tubiao.png) no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.play {
+    height: 9vw;
+    width: 9vw;
+    background: url(./tubiao1.png) no-repeat;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}

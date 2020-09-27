@@ -6,65 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>升旗html</title>
-    <style>
-        body {
-            background: url("./bg.png") no-repeat fixed center;
-        }
-        .container {
-            position: relative;
-            display: inline;
-        }
-        .flag {
-            transform: translate3d(0, 26em, 0);
-            transition: 7s all ease-in-out;
-            width: 100px;
-        }
-        .flag img {
-            width: 100px;
-            position: absolute;
-            z-index: 9999;
-            left: 90px;
-        }
-        .flagpole {
-            width: 180px;
-        }
-        .flagpole img {
-            width: 180px;
-        }
-        .up {
-            transform: translate3d(0, 0, 0);
-        }
-        .students {
-            /*position: relative;*/
-        }
-        .students img {
-            width: 350px;
-            position: absolute;
-            bottom: 0;
-        }
-        #flag_up {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: red;
-            position: absolute;
-            bottom: 150px;
-            right: 10px;
-        }
-        .pause {
-            height: 38px;
-            width: 38px;
-            display: block;
-            background: url(./tubiao.png) no-repeat;
-        }
-
-        .play {
-            height: 38px;
-            width: 38px;
-            background: url(./tubiao1.png) no-repeat;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="./main.css">
+    <script type="text/javascript" src="./main.js"></script>
 </head>
 <body>
 <a class="play" id="audioBtn" style="cursor:pointer;" onclick="autoPlay()"></a>
@@ -82,53 +25,7 @@
         <img src="./zuizhong.png" alt="">
     </div>
     <button id="flag_up">升旗</button>
-<!--    <button id="flag_down">降下</button>-->
+<!-- <button id="flag_down">降下</button> -->
 </div>
-<script>
-
-    document.querySelector("#flag_up").addEventListener('click', () => {
-        document.querySelector(".flag").classList.add("up")
-    })
-    document.querySelector("#flag_down").addEventListener('click', () => {
-        document.querySelector(".flag").classList.remove('up')
-    })
-
-</script>
-<script>
-    function autoPlay() {
-        var myAuto = document.getElementById('bgMusic');
-        var btn = document.getElementById('audioBtn');
-        if (myAuto.paused) {
-            myAuto.play();
-            btn.classList.remove("pause");
-            btn.classList.add("play");
-        } else {
-            myAuto.pause();
-
-            btn.classList.remove("play");
-            btn.classList.add("pause");
-        }
-
-    }
-</script>
-
-
-<script type="text/javascript">
-    function audioAutoPlay() {
-        var audio = document.getElementById("bgMusic"),
-            play = function () {
-                audio.play();
-                document.removeEventListener("touchstart", play, false);
-            };
-        audio.play();
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            play();
-        }, false);
-        document.addEventListener('YixinJSBridgeReady', function () {
-            play();
-        }, false);
-        document.addEventListener("touchstart", play, false);
-    }
-</script>
 </body>
 </html>
