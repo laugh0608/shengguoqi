@@ -20,6 +20,7 @@ function autoPlay() {
     }
 
 }
+
 function audioAutoPlay() {
     var audio = document.getElementById("bgMusic"),
         play = function () {
