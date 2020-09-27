@@ -1,10 +1,24 @@
+/*
+ * @Atthor: DaBaiLuoBo
+ * @Date: 2020-09-27 22:11:00
+ */
+// 国旗升降
 document.querySelector("#flag_up").addEventListener('click', () => {
-    document.querySelector(".flag").classList.add("up")
-})
+    document.querySelector(".flag").classList.add("up");
+    // 弹窗延时打开
+    setTimeout(function () {
+        document.querySelector("#peopleNum").classList.remove("peopleNumStyle");
+    }, 7000);
+});
 document.querySelector("#flag_down").addEventListener('click', () => {
-    document.querySelector(".flag").classList.remove('up')
-})
-
+    document.querySelector(".flag").classList.remove('up');
+});
+// 弹窗关闭
+document.querySelector("#offAlert").addEventListener('click', () => {
+    document.querySelector(".numAlert").classList.add("peopleNumStyle");
+    // document.querySelector(".flag").classList.remove('up');
+});
+// 播放器控制开关
 function autoPlay() {
     var myAuto = document.getElementById('bgMusic');
     var btn = document.getElementById('audioBtn');
@@ -14,7 +28,6 @@ function autoPlay() {
         btn.classList.add("play");
     } else {
         myAuto.pause();
-
         btn.classList.remove("play");
         btn.classList.add("pause");
     }

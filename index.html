@@ -1,31 +1,35 @@
+<!--
+ * @Atthor: DaBaiLuoBo
+ * @Date: 2020-09-27 22:11:00
+-->
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>升旗html</title>
     <link rel="stylesheet" href="./main.css">
 </head>
+
 <body>
-<a class="play" id="audioBtn" style="cursor:pointer;" onclick="autoPlay()"></a>
-<audio id="bgMusic" src="./guoge.mp3" autoplay preload></audio>
-<div>
+    <audio id="bgMusic" src="./guoge.mp3" autoplay preload></audio>
     <div class="container">
-        <div class="flag">
-            <img src="./guoqi.gif" alt="">
+        <a class="play" id="audioBtn" style="cursor:pointer;" onclick="autoPlay()"></a>
+        <img class="flag" src="./guoqi.gif" alt="">
+        <img class="flagpole" src="./qigan.png" alt="">
+        <img class="students" src="./zuizhong.png" alt="">
+        <div class="numAlert peopleNumStyle" id="peopleNum">
+            <p>共有 {{num}} 人参与本活动</p> <br>
+            <p>您是第 {{num1}} 个升起国旗的</p>
+            <button id="offAlert">X</button>
         </div>
-        <div class="flagpole">
-            <img src="./qigan.png" alt="">
-        </div>
+        <button id="flag_up">升旗</button>
+        <!-- <button id="flag_down">降下</button> -->
     </div>
-    <div class="students">
-        <img src="./zuizhong.png" alt="">
-    </div>
-    <button id="flag_up">升旗</button>
-    <!-- <button id="flag_down">降下</button> -->
-</div>
-<script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
 </body>
+
 </html>

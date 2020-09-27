@@ -1,46 +1,69 @@
+html,
 body {
-    background: url("./bg.png") no-repeat fixed center;
+    margin: 0;
+    height: 100%;
 }
+
 .container {
-    position: relative;
-    display: inline;
+    background-image: url("./bg.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
+
 .flag {
-    transform: translate3d(0, 26em, 0);
-    transition: 7s all ease-in-out;
-    width: 30vw;
-}
-.flag img {
-    width: 30vw;
     position: absolute;
-    z-index: 9999;
-    left: 23vw;
+    width: 30vw;
+    left: 22vw;
 }
+
 .flagpole {
-    width: 50vw;
+    position: absolute;
+    bottom: 25vw;
+    width: 45vw;
 }
-.flagpole img {
-    width: 50vw;
+
+.students {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
 }
+
 .up {
     transform: translate3d(0, 0, 0);
 }
-.students {
-    /*position: relative;*/
+
+.flag {
+    transform: translate3d(0, 26em, 0);
+    transition: 7s all ease-in-out;
 }
-.students img {
-    width: 100vw;
-    position: absolute;
-    bottom: 0;
+
+.peopleNumStyle {
+    display: none;
 }
+
 #flag_up {
-    width: 15vw;
-    height: 15vw;
+    position: absolute;
+    right: 5vw;
+    bottom: 40vw;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: red;
+}
+
+.numAlert {
+    text-align: center;
+    background: pink;
+    width: 50vw;
+    height: 50vw;
     position: absolute;
-    bottom: 40vw;
-    right: 5vw;
+    top: 50%;
+    left: 50%;
+    margin-left: -25vw;
+    margin-top: -25vw;
 }
 .pause {
     height: 9vw;
