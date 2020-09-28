@@ -38,7 +38,7 @@ body {
 
 .flag {
     transform: translate3d(0, 26em, 0);
-    transition: 7s all ease-in-out;
+    transition: 9s all ease-in-out;
 }
 
 .peopleNumStyle {

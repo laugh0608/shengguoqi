@@ -8,7 +8,7 @@ document.querySelector("#flag_up").addEventListener('click', () => {
     // 弹窗延时打开
     setTimeout(function () {
         document.querySelector("#peopleNum").classList.remove("peopleNumStyle");
-    }, 7000);
+    }, 9000);
 });
 document.querySelector("#flag_down").addEventListener('click', () => {
     document.querySelector(".flag").classList.remove('up');
