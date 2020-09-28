@@ -13,11 +13,6 @@ document.querySelector("#flag_up").addEventListener('click', () => {
 document.querySelector("#flag_down").addEventListener('click', () => {
     document.querySelector(".flag").classList.remove('up');
 });
-// 弹窗关闭
-document.querySelector("#offAlert").addEventListener('click', () => {
-    document.querySelector(".numAlert").classList.add("peopleNumStyle");
-    // document.querySelector(".flag").classList.remove('up');
-});
 // 播放器控制开关
 function autoPlay() {
     var myAuto = document.getElementById('bgMusic');

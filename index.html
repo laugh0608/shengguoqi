@@ -10,7 +10,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>升旗html</title>
+    <title>升旗</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 
@@ -24,12 +24,17 @@
         <div class="numAlert peopleNumStyle" id="peopleNum">
             <p>共有 {{num}} 人参与本活动</p> <br>
             <p>您是第 {{num1}} 个升起国旗的</p>
-            <button id="offAlert">X</button>
+            <button id="alertOff">X</button>
+            <script>
+                document.querySelector("#alertOff").addEventListener('click', () => {
+                    document.querySelector(".numAlert").classList.add("peopleNumStyle");
+                });
+            </script>
         </div>
         <button id="flag_up">升旗</button>
         <!-- <button id="flag_down">降下</button> -->
     </div>
-    <script type="text/javascript" src="./main.js"></script>
 </body>
+<script type="text/javascript" src="./main.js"></script>
 
 </html>
